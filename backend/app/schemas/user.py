@@ -1,8 +1,9 @@
-from pydantic import BaseModel, EmailStr
 from typing import Literal
 
+from pydantic import BaseModel, EmailStr
 
-class UserCreate(BaseModel):
+
+class UserRegister(BaseModel):
     name: str
     email: EmailStr
     password: str
@@ -20,5 +21,6 @@ class UserResponse(BaseModel):
     email: EmailStr
     role: str
 
-    class Config:
-        from_attributes = True
+    model_config = {
+        "from_attributes": True
+    }

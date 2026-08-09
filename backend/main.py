@@ -1,20 +1,27 @@
 from fastapi import FastAPI
 
+from app.database.database import Base, engine
+
+# Import models so SQLAlchemy registers them
+from app.models.user import User
+
+Base.metadata.create_all(bind=engine)
+
 app = FastAPI(
     title="Smart Health Monitoring API",
-    description="Production-grade Health Monitoring System",
-    version="1.0.0"
+    version="1.0.0",
 )
 
+
 @app.get("/")
-async def root():
+def root():
     return {
-        "message": "Welcome to Smart Health Monitoring API",
-        "status": "running"
+        "message": "Smart Health Monitoring API is running"
     }
 
+
 @app.get("/health")
-async def health():
+def health():
     return {
         "status": "healthy"
     }

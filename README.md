@@ -1,7 +1,20 @@
-<<<<<<< HEAD
 # Smart Health Monitoring System
 
-Production-grade Full Stack Machine Learning application.
-=======
-# smart-health-monitoring-system
->>>>>>> 288ea1d5e63046e39b2b5c3463516fe1d92d49b9
+A production-grade full-stack health monitoring application built with:
+
+- FastAPI
+- React
+- PostgreSQL
+- TensorFlow
+- PyTorch
+- Scikit-learn
+
+## Features
+
+- Secure authentication
+- Health record management
+- Machine learning risk prediction
+- Patient dashboard
+- Provider dashboard
+- REST API
+- Docker deployment

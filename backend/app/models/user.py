@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String
 
-from app.database.database import Base
+from app.db.session import Base
 
 
 class User(Base):
@@ -10,8 +10,8 @@ class User(Base):
 
     name = Column(String(100), nullable=False)
 
-    email = Column(String(150), unique=True, nullable=False)
+    email = Column(String(150), unique=True, nullable=False, index=True)
 
     password = Column(String(255), nullable=False)
 
-    role = Column(String(20), default="patient")
+    role = Column(String(20), nullable=False, default="patient")
